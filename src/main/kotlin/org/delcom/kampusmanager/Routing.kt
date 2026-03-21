@@ -35,7 +35,7 @@ fun Application.configureRouting() {
 
     routing {
         get("/") {
-            call.respondText("Kampus Manager API v1.0 – org.delcom.kampusmanager")
+            call.respondText("Kampus Manager API v1.0 – org.delcom.kampusmanager dibuat Andre Komting 11S23026")
         }
 
         // ── Auth ──────────────────────────────────────────────────────────
