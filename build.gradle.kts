@@ -13,6 +13,24 @@ plugins {
 group   = "org.delcom.kampusmanager"
 version = "1.0.0"
 
+// ✅ FIX: SAMAKAN JAVA KE 23
+java {
+    sourceCompatibility = JavaVersion.VERSION_23
+    targetCompatibility = JavaVersion.VERSION_23
+}
+
+// ✅ FIX: paksa Java compile ke 23
+tasks.withType<JavaCompile>().configureEach {
+    options.release.set(23)
+}
+
+// ✅ FIX: paksa Kotlin ke 23
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+    kotlinOptions {
+        jvmTarget = "23"
+    }
+}
+
 application {
     mainClass = "org.delcom.kampusmanager.ApplicationKt"
     val isDevelopment: Boolean = project.ext.has("development")
@@ -36,14 +54,14 @@ dependencies {
     implementation("io.ktor:ktor-server-status-pages:$ktor_version")
     implementation("io.ktor:ktor-server-host-common:$ktor_version")
 
-    // Database - Exposed ORM
+    // Database
     implementation("org.jetbrains.exposed:exposed-core:$exposed_version")
     implementation("org.jetbrains.exposed:exposed-dao:$exposed_version")
     implementation("org.jetbrains.exposed:exposed-jdbc:$exposed_version")
     implementation("org.jetbrains.exposed:exposed-kotlin-datetime:$exposed_version")
     implementation("org.postgresql:postgresql:42.7.5")
 
-    // DI - Koin
+    // DI
     implementation("io.insert-koin:koin-ktor:$koin_version")
     implementation("io.insert-koin:koin-logger-slf4j:$koin_version")
 
