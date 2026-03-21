@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93f8178c-3099-41af-889d-85f94e9c7e4f" name="Changes" comment="" />
+    <list default="true" id="93f8178c-3099-41af-889d-85f94e9c7e4f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,6 +62,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/proyek/Proyek1/pam-2026-ifs23026-proyek1-be",
@@ -68,14 +71,15 @@
 }]]></component>
   <component name="RunManager">
     <configuration name="ApplicationKt" type="KtorApplicationConfigurationType" factoryName="Ktor" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.jdks/openjdk-25.0.2" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="org.delcom.kampusmanager.ApplicationKt" />
-      <module name="kampus-manager-be.main" />
-      <option name="alternativeJrePath" />
-      <option name="alternativeJrePathEnabled" value="false" />
+      <option name="alternativeJrePath" value="$USER_HOME$/.jdks/openjdk-25.0.2" />
+      <option name="alternativeJrePathEnabled" value="true" />
       <option name="includeProvidedScope" value="false" />
       <option name="mainClass" value="org.delcom.kampusmanager.ApplicationKt" />
       <option name="passParentEnvs" value="true" />
-      <option name="programParameters" />
+      <option name="programParameters" value="" />
       <option name="shortenCommandLine" />
       <option name="vmParameters" />
       <option name="workingDirectory" value="C:\proyek\Proyek1\pam-2026-ifs23026-proyek1-be" />
