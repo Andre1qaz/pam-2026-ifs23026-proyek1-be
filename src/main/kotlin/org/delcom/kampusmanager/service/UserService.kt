@@ -87,6 +87,17 @@ class UserService(private val userRepo: IUserRepository) {
         val user   = userRepo.findById(userId) ?: throw AppException(404, "Pengguna tidak ditemukan")
         val file   = user.photo?.let { File(it) } ?: throw AppException(404, "Foto belum tersedia")
         if (!file.exists()) throw AppException(404, "File foto tidak ditemukan")
+
+        // Tentukan content type berdasarkan ekstensi file
+        val contentType = when (file.extension.lowercase()) {
+            "jpg", "jpeg" -> io.ktor.http.ContentType.Image.JPEG
+            "png"         -> io.ktor.http.ContentType.Image.PNG
+            "webp"        -> io.ktor.http.ContentType.parse("image/webp")
+            else          -> io.ktor.http.ContentType.Image.Any
+        }
+        call.response.header(
+            io.ktor.http.HttpHeaders.CacheControl, "no-cache, no-store, must-revalidate"
+        )
         call.respondFile(file)
     }
 }
